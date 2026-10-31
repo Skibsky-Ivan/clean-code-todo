@@ -1,60 +1,49 @@
-<html>
+<!doctype html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Todo App</title>
     <link
+      rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Lato:300,400,700"
-      rel="stylesheet"
-      type="text/css"
     />
-    <link
-      rel="stylesheet"
-      href="style.css"
-      type="text/css"
-      media="screen"
-      charset="utf-8"
-    />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="aaa">
-      <img src="./eisenhower-matrix.jpg" /><a
-        class="more_inf"
-        href="https://goal-life.com/page/method/matrix-eisenhower"
-        >Want more details&quest;</a
-      >
+    <div class="wrapper">
+      <header class="hero">
+        <img class="hero_img" src="./eisenhower-matrix.jpg" />
+        <a
+          class="more_inf"
+          href="https://goal-life.com/page/method/matrix-eisenhower"
+          >Want more details&quest;</a
+        >
+      </header>
+
+      <main class="content">
+        <section class="add_task_section">
+          <h3>
+            <label class="new_task_label" for="new_task">Add Item</label>
+          </h3>
+          <div class="task_row_wrapper">
+            <input id="new_task_input" class="new_task_input" type="text" />
+            <button id="add_button" class="base_button">Add</button>
+          </div>
+        </section>
+
+        <section class="incomplete_tasks_section">
+          <h3>Todo</h3>
+          <ul class="list_tasks incomplete_tasks"></ul>
+        </section>
+
+        <section class="complete_tasks_section">
+          <h3>Completed</h3>
+          <ul class="list_tasks completed_tasks"></ul>
+        </section>
+      </main>
     </div>
-    <div class="centered-main-page-element">
-      <p id="topSectionForAddingElementToList">
-        <label for="new-task">Add Item</label>
-      </p>
-      <div class="task-row-wrapper">
-        <input id="new-task" class="task" type="text" /><button>Add</button>
-      </div>
-      <h3>Todo</h3>
-      <ul id="incompleteTasks">
-        <li>
-          <input type="checkbox" /><label class="task">Pay Bills</label
-          ><input type="text" class="task" /><button class="edit">Edit</button
-          ><button class="delete"><img src="./remove.svg" /></button>
-        </li>
-        <li class="editMode">
-          <input type="checkbox" /><label class="task">Go Shopping</label
-          ><input type="text" value="Go Shopping" class="task" /><button
-            class="edit"
-          >
-            Save</button
-          ><button class="delete"><img src="./remove.svg" /></button>
-        </li>
-      </ul>
-      <h3>Completed</h3>
-      <ul id="completed-tasks">
-        <li>
-          <input type="checkbox" checked /><label class="task"
-            >See the Doctor</label
-          ><input type="text" class="task" /><button class="edit">Edit</button
-          ><button class="delete"><img src="./remove.svg" /></button>
-        </li>
-      </ul>
-    </div>
+
     <script type="text/javascript" src="app.js"></script>
   </body>
 </html>
